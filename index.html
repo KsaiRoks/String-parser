@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Анализатор</title>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .group-box { margin-bottom: 20px; }
+        label { font-weight: bold; }
+        textarea, input, select { width: 95%; padding: 5px; font-size: 14px; }
+        button { padding: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+<div class="group-box">
+    <h3>Переменные</h3>
+    <textarea id="memo1" rows="5">i
+j
+k1
+h_2</textarea>
+</div>
+
+<div class="group-box">
+    <h3>Блок анализа</h3>
+    <input type="text" id="edit1" size="50" value="if not (i or j) then $$$ else $$$">
+</div>
+
+<div class="group-box">
+    <h3>Управление</h3>
+    <button onclick="parseExpression()">Проверить</button>
+    <button onclick="resetForm()">Очистить</button>
+</div>
+
+<div class="group-box">
+    <h3>Результат</h3>
+    <p id="label1"></p>
+</div>
+<select id="listBox1" multiple style="width: 200px; height: 200px;"></select>
+
+<script src="script.js"></script>
+</body>
+</html>
